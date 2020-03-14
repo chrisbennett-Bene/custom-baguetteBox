@@ -506,6 +506,9 @@
 		var width = window.innerWidth * window.devicePixelRatio;
 		var height = window.innerHeight * window.devicePixelRatio;
 		var orientation = height > width ?  "portrait" : "landscape";
+		console.log("width  = " +width);
+		console.log("height = " +height);
+		console.log("orient = " +orientation);
 		
 		// If dataset is supported find the most suitable image
 		if (image.dataset) {
@@ -516,9 +519,11 @@
                 if (orientation === "landscape") {
 					// grab height data attribute
 				    srcs[item.split('~')[1].substring(7)] = image.dataset[item];
+					console.log("variation height: "+ item.split('~')[1].substring(7))
                 } else {
 					// grab width data attribute
 					srcs[item.split('~')[0].substring(6)] = image.dataset[item];
+					console.log("variation width: "+ item.split('~')[0].substring(6))
 				}
             }
 			
