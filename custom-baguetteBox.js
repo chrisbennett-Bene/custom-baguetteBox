@@ -515,10 +515,10 @@
 				
                 if (orientation === "landscape") {
 					// grab height data attribute
-				    srcs[item.split('~')[1].substring(7)] = image.dataset[item];
+				    srcs[item.split('·')[1].substring(7)] = image.dataset[item];
                 } else {
 					// grab width data attribute
-					srcs[item.split('~')[0].substring(6)] = image.dataset[item];
+					srcs[item.split('·')[0].substring(6)] = image.dataset[item];
 				}
             }
 			
